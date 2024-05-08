@@ -3,7 +3,7 @@ let cachedQA = null;
 async function loadQA() {
   if (!cachedQA) {
     try {
-      const response = await fetch('https://raw.githubusercontent.com/dimakan200kg/history/main/code.json');
+      const response = await fetch('https://raw.githubusercontent.com/dimakan200kg/history/main/question.json');
       cachedQA = await response.json();
     } catch (error) {
       console.error('Ошибка при загрузке данных:', error);
