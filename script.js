@@ -3,8 +3,9 @@ let cachedQA = null;
 async function loadQA() {
   if (!cachedQA) {
     try {
-      const response = await fetch('https://raw.githubusercontent.com/dimakan200kg/history/main/q.js');
+      const response = await fetch('https://raw.githubusercontent.com/dimakan200kg/history/main/q.json');
       cachedQA = await response.json();
+      console.log('Данные успешно загружены:', cachedQA, 'Методы sa() и fa("кусок вопроса") готовы к использованию.');
     } catch (error) {
       console.error('Ошибка при загрузке данных:', error);
       cachedQA = [];
